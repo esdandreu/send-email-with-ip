@@ -1,7 +1,10 @@
-source .env
+#!/bin/bash
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source $SCRIPT_DIR/.env
 echo $EMAIL
+echo $PASSWORD
+echo $TO
 PUBLICIP="`wget -qO- https://ipecho.net/plain`"
-echo $PUBLICIP
 sendemail -l email.log     \
     -f $EMAIL \
     -u "What is my IP" \
