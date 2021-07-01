@@ -1,8 +1,10 @@
+source .env
+$PUBLICIP=`wget -qO- https://ipecho.net/plain`
 sendemail -l email.log     \
-    -f "spamandreu@gmail.com"   \
-    -u "Email Subject 1"     \
-    -t "esdandreu@gmail.com" \
-    -s "smtp.gmail.com:587"  \
-    -m "Hello world" \
-    -xu "spamandreu@gmail.com" \
-    -xp "sp4m.n0w"
+    -f $EMAIL \
+    -u "What is my IP" \
+    -t $TO \
+    -s "smtp.gmail.com:587" \
+    -m "Public IP: $PUBLICIP\n" \
+    -xu $EMAIL \
+    -xp $PASSWORD
