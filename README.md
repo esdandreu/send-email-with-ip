@@ -49,5 +49,7 @@ write:
 	```
 	Choose an editor in the command line and add a line with:
 	```
-	@reboot /usr/local/bin/send-email-with-ip.sh
+	@reboot /usr/local/bin/send-email-with-ip/send-email-with-ip.sh
 	```
+
+Now everything is set up. Reboot and check!
