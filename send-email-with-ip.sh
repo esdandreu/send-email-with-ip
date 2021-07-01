@@ -1,6 +1,7 @@
 source .env
-$PUBLICIP=`wget -qO- https://ipecho.net/plain`
 echo $EMAIL
+$PUBLICIP=`wget -qO- https://ipecho.net/plain`
+echo $PUBLICIP
 sendemail -l email.log     \
     -f $EMAIL \
     -u "What is my IP" \
