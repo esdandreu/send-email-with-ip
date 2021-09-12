@@ -7,6 +7,6 @@ sendemail -l email.log     \
     -u "What is my IP" \
     -t $TO \
     -s "smtp.gmail.com:587" \
-    -m "Public IP: $PUBLICIP\n" \
+    -m "Public IP: $PUBLICIP\n https://my.noip.com/dynamic-dns" \
     -xu $EMAIL \
     -xp $PASSWORD
